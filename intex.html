@@ -21,6 +21,19 @@ font-size :3rem;
 <body onscroll="showCount()" >
 
 <h1>Throttle Example</h1>
+ <h3>
+  What is throttling
+ </h3>
+ <p>
+  Throttling is a performance optimization technique that limits how often a function can execute over a continuous period of time. 
+  It guarantees that a target function runs at a maximum rate of once per specified time interval, regardless of how many times the event is triggered.
+  </p>
+ <h3>
+  Why Use Throttling?
+ </h3>
+ <p>
+  High-frequency events like window scrolling, resizing, or dragging can trigger web browser event handlers dozens of times per second. Throttling prevents application slowdowns and lag by forcing your code to update at a regular, controlled pace.
+</p>
   <section>
    <p class="n_count"> Normal Count</p>
    <p class="t_count"> Throttle Count</p>
