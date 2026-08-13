@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Fundatmentals</title>
+  <style>
+#container {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 3/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 95%;
+  aspect-ratio: 3/1;
+}
+
+.green {
+  background-color: lightgreen;
+  width: 80%;
+  aspect-ratio: 4/1;
+}
+
+.blue, .green {
+  margin: 2px;
+  scroll-snap-align: end;
+  scroll-margin-bottom: 20px;
+}
+</style>
+</head>
+<body onscroll="showCount()">
+
+<h1>Throttle Example</h1>
+  <section>
+   <p class="n_count"> Normal Count</p>
+   <p class="t_count"> Throttle Count</p>
+  </section>
+<script>
+  const  normal_div = document.querySelector('.n_count');
+  const  throttle_div = document.querySelector('.t_count');
+ let n_count = 0;
+let t_count = 0;
+ let isScrolling = true;
+ const normalCount =()=>{
+n_count++;
+normal_div.innerHTML =`Normal Count : ${n_count}`;
+}
+const showCount = () => {
+  normalCount();
+  throttleCount();
+}
+const  throttleCount = () => {
+  if(isScrolling === true) {
+    t_count++;
+    throttle_div.innerHTML =`Normal Count : ${t_count}`;
+    isScrolling  = false;
+   setTimeout(() =>{
+   isScrolling  = ture;
+  },1000);
+  }
+
+}
+  </script>
+
+</body>
+</html>
