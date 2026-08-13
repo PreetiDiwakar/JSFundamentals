@@ -2,38 +2,23 @@
 <html>
 <head>
 <title>JavaScript Fundatmentals</title>
-  <style>
-#container {
-  position: relative;
-  width: 80%;
-  aspect-ratio: 3/1;
-  margin: auto;
-  border: solid black 2px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+<style>
+*{
+font-family:"Lexend_Deca_Medium";
+}
+body {
+height:200vh;
+ }
+section{
+position : fixed;
+}
+p {
+font-size :3rem;
 }
 
-.blue {
-  background-color: lightblue;
-  width: 95%;
-  aspect-ratio: 3/1;
-}
-
-.green {
-  background-color: lightgreen;
-  width: 80%;
-  aspect-ratio: 4/1;
-}
-
-.blue, .green {
-  margin: 2px;
-  scroll-snap-align: end;
-  scroll-margin-bottom: 20px;
-}
 </style>
 </head>
-<body onscroll="showCount()">
+<body onscroll="showCount()" >
 
 <h1>Throttle Example</h1>
   <section>
@@ -60,7 +45,7 @@ const  throttleCount = () => {
     throttle_div.innerHTML =`Normal Count : ${t_count}`;
     isScrolling  = false;
    setTimeout(() =>{
-   isScrolling  = ture;
+   isScrolling  = true;
   },1000);
   }
 
